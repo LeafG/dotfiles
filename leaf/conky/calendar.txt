@@ -1,0 +1,20 @@
+#format of in this text file
+#MMDD;N;TEXT
+#MMDD = month day
+#N    = 0 or 1 (1 to display colours of bank holidays)
+#TEXT = Text to display 
+
+#fêtes civiles
+0101;1;Jour de l'an
+0501;1;Fête du travail
+0508;1,Victoire 1945
+0714;1;Fête nationale
+1111;1;Armistice 1918
+
+#fêtes religieuses
+1225;1;Noël
+0405;1;Lundi Pâques
+0513;1;Jeudi de l'Ascension 
+0524;1;Lundi de Pentecôte
+0815;1;Assomption
+1101;1;Toussaint

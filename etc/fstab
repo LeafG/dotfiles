@@ -1,0 +1,10 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system>	<dir>	<type>	<options>	<dump>	<pass>
+tmpfs		/tmp	tmpfs	nodev,nosuid	0	0
+UUID=13682a26-ed81-47ec-a0e1-a95fafab3d34 swap swap defaults 0 0
+UUID=36c594e0-faff-4613-aea8-c457a95006ac /home ext4 defaults 0 1
+UUID=ae2fe66b-5f9a-4a6f-b712-6d0f0abee24c /boot ext2 defaults 0 1
+UUID=bd732963-3afa-425c-bc71-a13aef0bac9b / ext4 defaults 0 1
+Upload   /media/sf_Upload vboxsf defaults 0 0

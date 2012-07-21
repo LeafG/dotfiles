@@ -1,0 +1,112 @@
+## killall conky && conky -c ~/TBG/ACC/.conkyrc
+
+ ###  Begin Window Settings  ##################################################
+ # Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints below,sticky,skip_taskbar,skip_pager
+# own_window_colour brown
+# own_window_class Conky
+# own_window_title AccuWeather Bs As
+
+ ### ARGB can be used for real transparency
+ ### NOTE that a composite manager is required for real transparency.
+ ### This option will not work as desired (in most cases) in conjunction with
+ ### 'own_window_type override'
+# own_window_argb_visual yes
+ ### When ARGB visuals are enabled, this use this to modify the alpha value
+ ### Valid range is 0-255, where 0 is 0% opacity, and 255 is 100% opacity. 
+#own_window_argb_value 0
+
+minimum_size 220 220    ## width, height
+maximum_width 220    ## width - usually a good idea to equal minimum width.
+
+gap_x 20    ## left &right
+gap_y 290    ## up & down
+
+alignment top_right
+ ####################################################  End Window Settings  ###
+ ###  Font Settings  ##########################################################
+ # Use Xft (anti-aliased font and stuff) 
+use_xft yes
+xftfont monospace:size=8
+ # Alpha of Xft font. Must be a value at or between 1 and 0 ###
+xftalpha 0
+ # Force UTF8? requires XFT ###
+override_utf8_locale yes
+
+draw_shades no
+draw_outline no
+uppercase no
+
+draw_outline no # amplifies text if yes
+ ######################################################  End Font Settings  ###
+ ###  Color Settings  #########################################################
+default_shade_color grey
+default_outline_color black
+
+default_color DCDCDC #Gainsboro
+color0 DAA520 #Goldenrod  FFFFF0 #Ivory
+# color1 778899 #LightSlateGrey
+color1 000000 #Black
+color2 FF8C00 #Darkorange
+color3 7FFF00 #Chartreuse
+color4 FFA07A #LightSalmon
+color5 FFDEAD #NavajoWhite
+color6 00BFFF #DeepSkyBlue
+color7 00FFFF #Cyan 48D1CC #MediumTurquoise
+color8 FFFF00 #Yellow
+color9 FF0000 #Red
+color10 000000 #Black
+ #####################################################  End Color Settings  ###
+ ###  Borders Section  ########################################################
+draw_borders no
+# Stippled borders?
+stippled_borders 0
+# border margins
+border_inner_margin 5
+# border width
+border_width 0
+ #####################################################  End Borders Secton  ###
+
+
+ # Use the Xdbe extension? (eliminates flicker)
+ # It is highly recommended to use own window with this one so
+ # double buffer won't be so big
+double_buffer yes
+
+ # Adds spaces around certain objects to stop them
+ # from moving other things around.
+ # only works with mono fonts
+use_spacer right
+ # Arguments are left, right, and none (default)
+
+ # Size of the standard text buffer (default is 256 bytes).
+ # Will allow for more text display per variable.
+text_buffer_size 256
+
+ # Sets bars size even for bars that do not hace that function
+ # IE: execbar and execibar
+# default_bar_size 335 9
+
+ # 0 makes Conky run forever
+total_run_times 0
+cpu_avg_samples 1
+net_avg_samples 1
+no_buffers yes
+
+ # Defaults to 4MiB
+ # Set to 0 to disable the image cache
+ # Increase this value if you use $image lots
+imlib_cache_size 0
+
+update_interval 1
+
+lua_load ~/conky/clock.lua
+lua_draw_hook_post draw_clock
+
+TEXT
+${image /usr/share/icons/png/lars2.png -p -0,0 -s 220x220}
+#${image /media/sf_Upload/conky-clock/pics/Topaz_Circled2.png -p -0,0 -s 220x220}
+

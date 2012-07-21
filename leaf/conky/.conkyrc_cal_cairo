@@ -1,0 +1,66 @@
+# -- Conky settings -- #
+background no
+update_interval 1000
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+imlib_cache_size 0
+
+# -- Window specifications -- #
+
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+#own_window_argb_visual yes
+#own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+own_window_title calendar box
+own_window_colour FFFFFF
+
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 320 260
+
+alignment top_right
+gap_x 20
+gap_y 20
+
+# -- Graphics settings -- #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# -- Text settings -- #
+use_xft yes
+xftfont Santana:size=12
+xftalpha 0
+
+uppercase no
+
+default_color 000000
+# colors:
+# default: grey, cool: green, warmer: yellow, warming: orange, hot: red
+default_color grey
+color1 00ff00
+color3 yellow
+color5 slate grey
+color6 lightgrey
+color7 orange
+color8 red
+
+##############################3
+ 
+lua_load /home/leaf/conky/conky_cal_cairo.lua
+lua_draw_hook_pre calendar_box
+
+TEXT
+#${font DejaVu:bold:size=11}${alignc}$color3${time %k:%M}${color}

@@ -1,0 +1,50 @@
+
+
+ !-------------------------------------------------------------------------------
+ !
+ !	X T E R M - Setting
+ !
+ !
+ XTerm*background:                       Gray15
+ XTerm*foreground:                       grey85
+ XTerm*cursorColor:                      darkRed
+ XTerm*scrollBar:                        true
+ XTterm*utf8:                            2
+ XTerm*termName:                         xterm-256color
+ XTerm*faceName:                         xft:Dejavu Sans Mono:pixelsize=11.5
+ ! http://invisible-island.net/xterm/xterm.faq.html#tiny_menus
+ XTerm.VT100.geometry:                   89x29
+ XTerm*saveLines:                        7777
+ XTerm*metaSendsEscape:                  true
+ XTerm*highlightSelection:               true
+ XTerm*trimSelection:                    true
+ XTerm*cutNewline:                       false
+ XTerm*colorBDMode:                      true
+ XTerm*colorBD:                          khaki
+ XTerm*charClass: 3:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+ 
+ !colors
+ !black
+ XTerm*color0:                           #171717
+ XTerm*color8:                           #737373
+ !red
+ XTerm*color1:                           #FF5E5E
+ XTerm*color9:                           #FF7878
+ !green
+ XTerm*color2:                           #9CE82B
+ XTerm*color10:                          #9ACD32
+ !yellow
+ XTerm*color3:                           #F0E68C
+ XTerm*color11:                          #EEE8AA
+ !blue
+ XTerm*color4:                           #008AFF
+ XTerm*color12:                          #4F98FF
+ !magenta
+ XTerm*color5:                           #E88CFF
+ XTerm*color13:                          #EDA6FF
+ !cyan
+ XTerm*color6:                           #87CEFA
+ XTerm*color14:                          #B0E2FF
+ !white
+ XTerm*color7:                           #DCDCCC
+ XTerm*color15:                          #FFFFFF

@@ -1,0 +1,22 @@
+(sleep 3 && /usr/bin/nm-applet --sm-disable) &
+tint2 &
+xfce4-power-manager &
+volumeicon -b &
+nitrogen --restore &
+xxkb &
+volumeicon -b &
+
+#xcompmgr &
+#xbacklight -set 100 &
+#/usr/bin/synclient TouchpadOff=1 &
+#batti &
+#fbxkb &
+
+#sh ~/startupconky.sh &
+#conky -c ~/.conkyrc;
+#conky -c ~/conky/.conkyrc_sys_info;
+conky -q &
+sh /home/leaf/conky/conkyLangToggle.sh;
+#conky -c ~/conky/.conkyrc_calendar;
+#conky -c ~/conky/.conkyrc_analog1;
+#conky -c ~/conky/.conkyrc_cal_cairo

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Conky Clock
+Type=Application
+Comment=Analog Clock
+Terminal=false
+Exec=sh  /home/leaf/conky/conkyClockToggle.sh
+Icon=/usr/share/icons/png/Topaz_Circled2.png
+Categories=Accessories;
+GenericName=Analog Clock

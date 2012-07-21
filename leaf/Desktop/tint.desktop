@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=xdotool key ctrl+alt+space
+Name=Application Menu
+Type=Application
+Comment=Show Application Menu
+Icon=/usr/share/icons/png/start2.png
+

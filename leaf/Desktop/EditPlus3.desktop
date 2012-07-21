@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=EditPlus3
+Exec=env WINEPREFIX="/home/leaf/.wine" wine C:\\\\Program_Files\\\\EditPlus3\\\\editplus.exe 
+Type=Application
+StartupNotify=true
+Path=/home/leaf/.wine/dosdevices/c:/Program_Files/EditPlus3
+Icon=/usr/share/icons/png/EditPlus3.png

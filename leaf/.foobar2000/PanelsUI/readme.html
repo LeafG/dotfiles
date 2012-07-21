@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #E6E6E6;
+}
+body {
+	background-color: #404040;
+}
+.style1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+a:link {
+	color: #B9B9B9;
+}
+a:visited {
+	color: #B9B9B9;
+}
+.style2 {
+	color: #66FFFF;
+	font-style: italic;
+}
+.style3 {color: #66FFFF}
+-->
+</style></head>
+
+<body>
+<p><span class="style1">Elegance</span><br />
+by jclim00 (<a href="http://customize.org/foobar/skins/50786">get newest release here</a>)</p>
+<p><img src="image-1.jpg" width="278" height="423" /></p>
+<p>This is a  minimalist panels_ui layout designed to work with any visual style<span class="style3">.</span> This is an as-is layout, I won't be taking any feature requests but I'll still try to help people who have problems setting it up. If you want to change something or add or remove panels, you're on your own.</p>
+<p><strong>changelog:</strong></p>
+<ul>
+  <li>0.5.0
+    (06-20-2007)
+    <ul>
+      <li class="style3">removed elfin2-based titlebar and borders, use windows visual style is now default</li>
+      <li class="style3">repositioned options button to the bottom of the miniplayer &quot;transparent border&quot;</li>
+      <li class="style3">buttons on the sides of the transparent border to pop up a new full mode view</li>
+      <li><span class="style3">full mode view features:
+        </span>
+        <ul>
+          <li class="style3">all panels visible from one view</li>
+          <li class="style3">all panels collapsible by &quot;transparent border&quot; buttons, popup can be pared down to just the SCPL view</li>
+          <li class="style3">can be used in tandem with miniplayer or maximized for full screen view</li>
+        </ul>
+      </li>
+      <li class="style3">addition of vis_egoh and peakmeter to full mode</li>
+      <li class="style3">simpler singles mode view</li>
+      <li class="style3">unlimited backgrounds can be chosen from the options</li>
+      <li class="style3">rating color tweaks</li>
+    </ul>
+  </li>
+  <li>0.4.0 (06-13-2007)
+    <ul>
+      <li>added option to use windows visual style</li>
+      <li>all panels (with a few exceptions) now transparent</li>
+      <li>user customizable background images</li>
+      <li>library filter: added header styles and modified &quot;generic&quot; layout</li>
+      <li>option to completely hide album/artist art from the now playing panel</li>
+      <li>moved options panel toggle to hidden bottom left and bottom right buttons</li>
+      <li>removed standard dark/light themes</li>
+    </ul>
+  </li>
+  <li>0.3.0 (06-11-2007)  
+    <ul>
+      <li>new options panel</li>
+      <li>migrated track order/replaygain controls to options</li>
+      <li>added light theme</li>
+    </ul>
+  </li>
+  <li>0.2.0
+    (06-08-2007)
+    <ul>
+      <li>rating system added</li>
+      <li>alternate header style</li>
+      <li>colored text in the readme refer to new layout features or updated info.</li>
+    </ul>
+  </li>
+  <li>0.1.0
+    (06-02-2007)
+    <ul>
+      <li>initial release</li>
+    </ul>
+  </li>
+</ul>
+<p><strong> required components:</strong></p>
+<ul>
+  <li><a href="http://yuo.be/columns.php">foo_ui_columns.dll</a></li>
+  <li><a href="http://panels.fooblog2000.com/">foo_ui_panels.dll</a>  - tested with <strong>panels 0.13.8 <span class="style3">(make sure you have the Jun 12 2007 build)</span></strong></li>
+  <li><a href="http://wiki.bowron.us/index.php/Foobar2000:Hooks">foo_cwb_hooks.dll</a></li>
+  <li><a href="http://lyrics.mirkforce.net/download.html">foo_lyricsdb.dll</a></li>
+</ul>
+<p><strong>optional components:</strong></p>
+<ul>
+  <li><a href="http://yuo.be/columns.php">foo_uie_albumlist.dll</a> - an alternative to using the library filter</li>
+  <li class="style3"><a href="http://www.geocities.jp/meir/foobar/">foo_uie_vis_egoh.dll</a> - alternative spectrum analyzer</li>
+  <li class="style3"><a href="http://www.hydrogenaudio.org/forums/index.php?showtopic=55562">foo_uie_peakmeter.dll</a> - peakmeter visualization</li>
+  <li><a href="http://acropolis.lokalen.org/2006/10/foobar2000/my-foobar2000-components">foo_dsp_crossfader.dll</a> - can be toggled in options panel</li>
+</ul>
+<p><strong>required fonts:</strong></p>
+<ul>
+  <li>Calibri - Vista font, if you don't have this, Microsoft provides it with the <a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=941b3470-3ae9-4aee-8f43-c6bb74cd1466&displaylang=en">Microsoft Office Compatibility Pack</a></li>
+  <li>AvantGarde LT Medium, AvantGarde LT Medium Caps - can be found included in this <a href="http://gsm.iamserio.us/VisualStyles/GEE.VS%20-%20MAD.zip">VS</a> (do not use calibri.ttf from this link, it's an early version of calibri that's quite buggy)</li>
+  <li>Webdings</li>
+</ul>
+<p><strong>installation</strong></p>
+<blockquote>
+  <p class="style2">	Upgrading from a previous Elegance version? Delete your images folder before extracting everything.<br />
+  </p>
+</blockquote>
+<ul>
+  <li>Download the required components and extract them to your foobar\components directory.<br />
+      <em>i.e. - C:\Program Files\foobar2000\components\</em></li>
+  <li>Copy the fonts to your windows Install\Fonts directory.<br />
+    <em>i.e. - C:\WINDOWS\Fonts\</em></li>
+  <li>Copy  \elegance\ to foobar2000\PanelsUI\ and retain the directory structure<br />
+      <em>i.e. - C:\Program Files\foobar2000\PanelsUI\elegance\images\</em></li>
+</ul>
+<blockquote>
+  <p> Start up Foobar. Choose Panels UI as layout if prompted. Open up Preferences. Change the following settings:</p>
+</blockquote>
+<ul>
+  <li><span class="style3">Display -&gt; Panels UI -&gt; select layout, elegance\elegance.pui
+    or elegance\scpl.pui<br />
+    <em>ELEGANCE.PUI is the miniplayer with an option to popup the full view mode; SCPL.PUI is the full mode without miniplayer</em></span>
+    <ul>
+      <li>check tray icon, check the rest as necessary</li>
+      <li>select user globals, change the art path to your needs
+        <ul>
+          <li>$puts(coverPath,$replace(%path%,%filename_ext%,folder.*))<em><br />
+  the example searches for folder.* in the same directory as the track.<br />
+          </em></li>
+          <li>$puts(artistPath,$replace(%path%,%filename_ext%,artist.*))<em><br />
+  the example searches for artist.* in the same directory as the track.</em><br />
+          <br />
+      </li>
+        </ul>
+      </li>
+      <li><strong>if you are updating from a previous panels_ui version, follow these instructions.</strong>
+        <ul>
+          <li>Display -&gt; Panels UI -&gt; Sort/Group<br />
+            <br />
+              <img src="image-2.jpg" width="484" height="347" /><br />
+            <br />
+          If the window doesn't look similar to this,<strong> close foobar and delete foo_ui_panels.dll from your components directory. Then restart foobar, and when prompted do not keep settings for the removed component.</strong> Close foobar again and place foo_ui_panels.dll in your components directory.<br />
+          <br />
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Display -&gt; Columns UI -&gt; Main
+
+    <ul>
+      <li>Importing and Exporting, import playlistswitcher.fcs<br />
+      </li>
+    </ul>
+  </li>
+  <li>(if using album list instead of libary filter) Media Library -&gt; Album List Panel -&gt; Advanced
+
+    <ul>
+      <li>Use custom colors, RGB values 85,85,85 for the background, 255,255,255 for text, and 0,0,0 for line color.</li>
+    </ul>
+  </li>
+</ul>
+<p><strong>usage:</strong><br />
+</p>
+<ul>
+  <li>Miniplayer
+    <ul>
+      <li>Main toolbar controls swap the 4 main panels. Clicking rating/ctrl toggles the stop/pause/play/etc. buttons with the rating controls<br />
+        <ul>
+          <li>When using the rating controls, if the current panel is the playlist switcher it will change the rating of the highlighted track(s). If not, then it edits the currently playing track.</li>
+        </ul>
+      </li>
+      <li></li>
+      <li>The options panel, <span class="style3">activated by clicking the bottom edge of the transparent border</span>, controls the playback order, replaygain mode, follow cursor toggle, crossfade toggle, volume, and visual options for the layout. <span class="style3">Clicking option will also resize the player back to its normal size if it's been changed.</span>
+        <ul>
+          <li>When switching backgrounds, restart your foobar after toggling. Transparencies are not updated automatically and a lot of colors from the previous background will bleed through.</li>
+          <li>Switching header styles may also not update automatically, scroll the SCPL up and down to refresh it.</li>
+        </ul>
+      </li>
+      <li>The art panel has 2 mini panels, clicking the artwork swaps album art and artist pictures, clicking the track info swaps the simple now playing display and a detailed display. <span class="style3">Clicking the art button in the toolbar when it is activated will hide all artwork from that panel.</span></li>
+      <li>The playlist panel has 2 formats, singles mode and album mode. Right-click the playlist and choose a sorting method to change formats. Clicking the playlist button in the toolbar when playlist is activated toggles the playlist switcher.</li>
+      <li>Browse activates the library filter or album list panel depending on the setting in the layout globals.</li>
+      <li>keyboard commands to keep in mind: + and - changes the volume, left and right arrows to seek back and forwards.</li>
+    </ul>
+  </li>
+  <li class="style3">Full View
+    <ul>
+      <li>Main toolbar toggles the art and options panel as well as controls playback functions and rating. Rating will always change the currently selected tracks and not the track currenly playing.</li>
+      <li>Options panel functions the same but also changes the visualization mode</li>
+      <li>Clicking areas of the transparent border hide the panels relative to it. No popup image shows up to indicate yet, and probably won't unless the buttons function gets a rework to resize the image source.</li>
+    </ul>
+  </li>
+</ul>
+<p><strong>user backgrounds</strong></p>
+<p>You can now use your own backgrounds as well as the default ones that come with this layout. In the Elegance folder is a new backgrounds folder with 4 images labeled image1.* to image4.*. Each image is <strong>274 pixels wide by 401 pixels high</strong>. <span class="style3">You can add your own images (they can be .gif .jpeg .png), just use image5.*, image6.* etc. </span>If the pictures are not the dimensions specified it will look stretched or misaligned. It's best to use pictures that do not have sharp constant contrast changes as they might not be very readable with text overlayed on top.</p>
+<p class="style3">To use backgrounds in the full view player, name them popup3.* etc. The layout has a default maximum background size of 1900x1200. If you want to use images larger than that you have to change the code in the full view config.<br />    
+    <em>Right click on the transparent border and look for this line at the top: $imageabs2(1900,1200,,,0,0,0,0,backgrounds\popup$eval($getpvar(popup_theme) + 1).*,VALIGN-T HALIGN-L)<br />
+Replace 1900,1200 with your maximum image size.</em></p>
+<p><strong>troubleshooting:</strong></p>
+<ul>
+  <li>Library Filter not showing up? Make sure you have the panels_ui version indicated above in the readme.</li>
+  <li class="style3">Are all discs showing up under Disc 1 under grouping? Change this field:
+    <ul>
+      <li>Panels UI -&gt; Sort/Group</li>
+      <li>Highlight Album and modify; replace the primary sort with<br />
+      $ifequal($get(isSingle),1,! Single,%discnumber% $upper(%album%))</li>
+    </ul>
+  </li>
+  <li>Do you use the %album artist% tag for Various Artists, and you have VA entries that have only 1 or 2 entries in the library filter? Change this field:
+    
+    <ul>
+      <li>Panels UI -&gt; Library filter</li>
+      <li>highlight the second entry in the box and change %artist% to %album artist%</li>
+    </ul>
+  </li>
+  <li>Do you want to sort the albums by date in the library filter?
+    
+    Change this field:
+    <ul>
+      <li>Panels UI -&gt; Library filter</li>
+      <li>highlight the third entry in the box and change $album% to %date% - %album%</li>
+    </ul>
+  </li>
+</ul>
+<p><strong>why isn't there...</strong></p>
+<ul>
+  <li>A volume slider?<br />
+  The colors of the volume slider are determined by the visual style windows is using. If the volume slider lines are dark, and it's overlayed on the toolbar which is also dark, it isn't very visible.</li>
+  <li>A functional seekbar?<br />
+  Same reason as above. There is the alternative of the wsh_panel but I've found that this is extremely buggy and causes crashes when overlayed on top of an existing track info panel.</li>
+  <li>A quicksearch toolbar?<br />
+  I don't use it. Plus, you can't change the font, thus it takes up a lot of space.</li>
+  <li>A playlist dropdown?<br />
+  It's ugly and not very functional.</li>
+</ul>
+<p><strong>what happened to gsm_flavored?</strong></p>
+<p>After a hard drive crash wiped the code I wrote updating my old gsm_flv layouts to work with the new panels_ui versions, I ended up abandoning them and using some parts in this one (notably the now playing display and album mode SCP layouts. no need to change something that isn't broken!)<br />
+</p>
+</body>
+
+</html>

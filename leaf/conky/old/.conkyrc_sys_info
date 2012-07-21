@@ -1,0 +1,135 @@
+# Conky settings #
+background yes
+update_interval 1
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+#imlib_cache_size 0
+
+#temperature_unit fahrenheit
+#temperature_unit celsius
+
+# Window specifications #
+
+own_window yes
+own_window_type desktop
+own_window_transparent no
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+own_window_colour black
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 1 1
+maximum_width 240
+
+alignment top_left
+gap_x 200
+gap_y 12
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftfont caviar dreams:size=8
+xftalpha 1
+
+uppercase no
+#use_spacer right
+#font Bitstream Vera Sans Mono:size=8
+
+# colors:
+# default: grey, cool: green, warmer: yellow, warming: orange, hot: red
+default_color grey
+color1 00ff00
+color3 yellow
+color5 slate grey
+color6 lightgrey
+color7 orange
+color8 red
+##############################################
+#  Output
+##############################################
+TEXT
+${color}${if_match ${cpu cpu0} < 10}CPU: ${cpubar cpu0}\
+${else}${if_match ${cpu cpu0} < 40}${color1}CPU: ${cpubar cpu0}\
+${else}${if_match ${cpu cpu0} < 90}${color3}CPU: ${cpubar cpu0}\
+${else}${if_match ${cpu cpu0} < 100}${color7}CPU: ${cpubar cpu0}\
+${else}${color8}CPU: ${cpubar cpu0}\
+${endif}${endif}${endif}${endif}${color}
+${color}${if_match $mem < 10}RAM: $membar\
+${else}${if_match $mem < 40}${color1}RAM: $membar\
+${else}${if_match $mem < 90}${color3}RAM: $membar\
+${else}${if_match $mem < 100}${color7}RAM: $membar\
+${else}${color8}$membar\
+${endif}${endif}${endif}${endif}${color}
+
+${font sans-serif:bold:size=8}SYSTEM ${hr 2}
+${font sans-serif:normal:size=8}$sysname $kernel $alignr $machine
+Host:$alignr$nodename
+Uptime:$alignr$uptime
+
+${color5}${font sans-serif:bold:size=8}Name          ${alignr}PID  CPU%  MEM%
+${color}${font sans-serif:bold:size=8}Highest CPU: ${color}${font}
+${color}${if_match ${top cpu 1} < 10}${top name 1}${alignr}${top pid 1}${alignr}${top cpu 1}${alignr}${top mem 1}\
+${else}${if_match ${top cpu 1} < 40}${color1}${top name 1} ${alignr}${top pid 1}${alignr}${top cpu 1}%${alignr}${top mem 1}%\
+${else}${if_match ${top cpu 1} < 90}${color3}${top name 1} ${alignr}${top pid 1}${alignr}${top cpu 1}%${alignr}${top mem 1}%\
+${else}${if_match ${top cpu 1} < 100}${color7}${top name 1} ${alignr}${top pid 1}${alignr}${top cpu 1}%${alignr}${top mem 1}%\
+${else}${color8}${top name 1} ${alignr}${top pid 1}${alignr}${top cpu 1}%${alignr}${top mem 1}%\
+${endif}${endif}${endif}${endif}${color}
+${color}${if_match ${top cpu 2} < 10}${top name 2}${alignr}${top pid 2}${alignr}${top cpu 2}${alignr}${top mem 2}\
+${else}${if_match ${top cpu 2} < 40}${color1}${top name 2} ${alignr}${top pid 2}${alignr}${top cpu 2}%${alignr}${top mem 2}%\
+${else}${if_match ${top cpu 2} < 90}${color3}${top name 2} ${alignr}${top pid 2}${alignr}${top cpu 2}%${alignr}${top mem 2}%\
+${else}${if_match ${top cpu 2} < 100}${color7}${top name 2} ${alignr}${top pid 2}${alignr}${top cpu 2}%${alignr}${top mem 2}%\
+${else}${color8}${top name 2} ${alignr}${top pid 2}${alignr}${top cpu 2}%${alignr}${top mem 2}%\
+${endif}${endif}${endif}${endif}${color}
+${color}${if_match ${top cpu 3} < 10}${top name 3}${alignr}${top pid 3}${alignr}${top cpu 3}${alignr}${top mem 3}\
+${else}${if_match ${top cpu 3} < 40}${color1}${top name 3} ${alignr}${top pid 3}${alignr}${top cpu 3}%${alignr}${top mem 3}%\
+${else}${if_match ${top cpu 3} < 90}${color3}${top name 3} ${alignr}${top pid 3}${alignr}${top cpu 3}%${alignr}${top mem 3}%\
+${else}${if_match ${top cpu 3} < 100}${color7}${top name 3} ${alignr}${top pid 3}${alignr}${top cpu 3}%${alignr}${top mem 3}%\
+${else}${color8}${top name 3} ${alignr}${top pid 3}${alignr}${top cpu 3}%${alignr}${top mem 3}%\
+${endif}${endif}${endif}${endif}${color}
+${color}${if_match ${top cpu 4} < 10}${top name 4}${alignr}${top pid 4}${alignr}${top cpu 4}${alignr}${top mem 4}\
+${else}${if_match ${top cpu 4} < 40}${color1}${top name 4} ${alignr}${top pid 4}${alignr}${top cpu 4}%${alignr}${top mem 4}%\
+${else}${if_match ${top cpu 4} < 90}${color3}${top name 4} ${alignr}${top pid 4}${alignr}${top cpu 4}%${alignr}${top mem 4}%\
+${else}${if_match ${top cpu 4} < 100}${color7}${top name 4} ${alignr}${top pid 4}${alignr}${top cpu 4}%${alignr}${top mem 4}%\
+${else}${color8}${top name 4} ${alignr}${top pid 4}${alignr}${top cpu 4}%${alignr}${top mem 4}%\
+${endif}${endif}${endif}${endif}${color}
+
+${color}${font sans-serif:bold:size=8}Highest MEM: ${color}${font}
+${color}${if_match ${top_mem cpu 1} < 10}${top_mem name 1}${alignr}${top_mem pid 1}${alignr}${top_mem cpu 1}${alignr}${top_mem mem 1}\
+${else}${if_match ${top_mem cpu 1} < 40}${color1}${top_mem name 1} ${alignr}${top_mem pid 1}${alignr}${top_mem cpu 1}%${alignr}${top_mem mem 1}%\
+${else}${if_match ${top_mem cpu 1} < 90}${color3}${top_mem name 1} ${alignr}${top_mem pid 1}${alignr}${top_mem cpu 1}%${alignr}${top_mem mem 1}%\
+${else}${if_match ${top_mem cpu 1} < 100}${color7}${top_mem name 1} ${alignr}${top_mem pid 1}${alignr}${top_mem cpu 1}%${alignr}${top_mem mem 1}%\
+${else}${color8}${top_mem name 1} ${alignr}${top_mem pid 1}${alignr}${top_mem cpu 1}%${alignr}${top_mem mem 1}%\
+${endif}${endif}${endif}${endif}${color}
+${color}${if_match ${top_mem cpu 2} < 10}${top_mem name 2}${alignr}${top_mem pid 2}${alignr}${top_mem cpu 2}${alignr}${top_mem mem 2}\
+${else}${if_match ${top_mem cpu 2} < 40}${color1}${top_mem name 2} ${alignr}${top_mem pid 2}${alignr}${top_mem cpu 2}%${alignr}${top_mem mem 2}%\
+${else}${if_match ${top_mem cpu 2} < 90}${color3}${top_mem name 2} ${alignr}${top_mem pid 2}${alignr}${top_mem cpu 2}%${alignr}${top_mem mem 2}%\
+${else}${if_match ${top_mem cpu 2} < 100}${color7}${top_mem name 2} ${alignr}${top_mem pid 2}${alignr}${top_mem cpu 2}%${alignr}${top_mem mem 2}%\
+${else}${color8}${top_mem name 2} ${alignr}${top_mem pid 2}${alignr}${top_mem cpu 2}%${alignr}${top_mem mem 2}%\
+${endif}${endif}${endif}${endif}${color}
+${color}${if_match ${top_mem cpu 3} < 10}${top_mem name 3}${alignr}${top_mem pid 3}${alignr}${top_mem cpu 3}${alignr}${top_mem mem 3}\
+${else}${if_match ${top_mem cpu 3} < 40}${color1}${top_mem name 3} ${alignr}${top_mem pid 3}${alignr}${top_mem cpu 3}%${alignr}${top_mem mem 3}%\
+${else}${if_match ${top_mem cpu 3} < 90}${color3}${top_mem name 3} ${alignr}${top_mem pid 3}${alignr}${top_mem cpu 3}%${alignr}${top_mem mem 3}%\
+${else}${if_match ${top_mem cpu 3} < 100}${color7}${top_mem name 3} ${alignr}${top_mem pid 3}${alignr}${top_mem cpu 3}%${alignr}${top_mem mem 3}%\
+${else}${color8}${top_mem name 3} ${alignr}${top_mem pid 3}${alignr}${top_mem cpu 3}%${alignr}${top_mem mem 3}%\
+${endif}${endif}${endif}${endif}${color}
+${color}${if_match ${top_mem cpu 4} < 10}${top_mem name 4}${alignr}${top_mem pid 4}${alignr}${top_mem cpu 4}${alignr}${top_mem mem 4}\
+${else}${if_match ${top_mem cpu 4} < 40}${color1}${top_mem name 4} ${alignr}${top_mem pid 4}${alignr}${top_mem cpu 4}%${alignr}${top_mem mem 4}%\
+${else}${if_match ${top_mem cpu 4} < 90}${color3}${top_mem name 4} ${alignr}${top_mem pid 4}${alignr}${top_mem cpu 4}%${alignr}${top_mem mem 4}%\
+${else}${if_match ${top_mem cpu 4} < 100}${color7}${top_mem name 4} ${alignr}${top_mem pid 4}${alignr}${top_mem cpu 4}%${alignr}${top_mem mem 4}%\
+${else}${color8}${top_mem name 4} ${alignr}${top_mem pid 4}${alignr}${top_mem cpu 4}%${alignr}${top_mem mem 4}%\
+${endif}${endif}${endif}${endif}${color}
+

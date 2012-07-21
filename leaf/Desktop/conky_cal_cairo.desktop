@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Conky Calendar (Cairo)
+Type=Application
+Comment=Calendar
+Terminal=false
+Exec=sh /home/leaf/conky/conkyCalCairoToggle.sh
+Icon=/usr/share/icons/png/calendar.png
+Categories=Accessories;
+GenericName=Calendar

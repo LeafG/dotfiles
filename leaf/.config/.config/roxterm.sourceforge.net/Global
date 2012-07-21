@@ -1,0 +1,8 @@
+
+[roxterm options]
+edit_shortcuts=1
+prefer_dark_theme=1
+only_warn_running=1
+warn_close=0
+colour_scheme=Tango
+shortcut_scheme=leaf

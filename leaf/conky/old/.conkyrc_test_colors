@@ -1,0 +1,107 @@
+# Conky settings #
+background yes
+update_interval 0.5
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+#imlib_cache_size 0
+
+#temperature_unit fahrenheit
+#temperature_unit celsius
+
+# Window specifications #
+
+own_window yes
+own_window_type desktop
+own_window_transparent no
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+own_window_colour black
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 1 1
+maximum_width 240
+
+alignment top_middle
+#gap_x 5
+#gap_y 5
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftfont caviar dreams:size=8
+xftalpha 1
+
+uppercase no
+
+
+# colors:
+# default: Green, 1: Grey, 2: Blue, 3: Yellow, 4: Aqua
+default_color 00ff00
+color1 grey
+color2 0096FF
+color3 yellow
+color4 00FFFF
+color5 slate grey
+color6 lightgrey
+##############################################
+#  Output
+##############################################
+
+# Lua Load  #
+#lua_load ~/conky/conky_colors.lua
+lua_load ~/conky/conky_func.lua
+
+TEXT
+
+# -- # ${color5}
+# -- # Name          ${alignr}PID     CPU%     MEM%
+# -- # Highest CPU:
+# -- # ${lua_parse top_cpu_colour 1}${top name 1} ${alignr}${top pid 1} ${alignr}${top cpu 1} ${alignr}${top mem 1}
+# -- # ${lua_parse top_cpu_colour 2}${top name 2} ${alignr}${top pid 2} ${alignr}${top cpu 2} ${alignr}${top mem 2}
+# -- # ${lua_parse top_cpu_colour 3}${top name 3} ${alignr}${top pid 3} ${alignr}${top cpu 3} ${alignr}${top mem 3}
+# -- # ${lua_parse top_cpu_colour 4}${top name 4} ${alignr}${top pid 4} ${alignr}${top cpu 4} ${alignr}${top mem 4}
+# -- # ${lua_parse top_cpu_colour 5}${top name 5} ${alignr}${top pid 5} ${alignr}${top cpu 5} ${alignr}${top mem 5}
+# -- # ${lua_parse top_cpu_colour 6}${top name 6} ${alignr}${top pid 6} ${alignr}${top cpu 6} ${alignr}${top mem 6}
+# -- # ${lua_parse top_cpu_colour 7}${top name 7} ${alignr}${top pid 7} ${alignr}${top cpu 7} ${alignr}${top mem 7}
+# -- # ${lua_parse top_cpu_colour 8}${top name 8} ${alignr}${top pid 8} ${alignr}${top cpu 8} ${alignr}${top mem 8}
+# -- # ${lua_parse top_cpu_colour 9}${top name 9} ${alignr}${top pid 9} ${alignr}${top cpu 9} ${alignr}${top mem 9}${color}
+# -- # 
+# -- # ${color5}Highest MEM:
+# -- # ${lua_parse top_mem_colour 1}${top_mem name 1}${alignr}${top_mem pid 1} ${alignr}${top_mem cpu 1} ${alignr}${top_mem mem 1}
+# -- # ${lua_parse top_mem_colour 2}${top_mem name 2}${alignr}${top_mem pid 2} ${alignr}${top_mem cpu 2} ${alignr}${top_mem mem 2}
+# -- # ${lua_parse top_mem_colour 3}${top_mem name 3}${alignr}${top_mem pid 3} ${alignr}${top_mem cpu 3} ${alignr}${top_mem mem 3}
+# -- # ${lua_parse top_mem_colour 4}${top_mem name 4}${alignr}${top_mem pid 4} ${alignr}${top_mem cpu 4} ${alignr}${top_mem mem 4}
+# -- # ${lua_parse top_mem_colour 5}${top_mem name 5}${alignr}${top_mem pid 5} ${alignr}${top_mem cpu 5} ${alignr}${top_mem mem 5}
+# -- # ${lua_parse top_mem_colour 6}${top_mem name 6}${alignr}${top_mem pid 6} ${alignr}${top_mem cpu 6} ${alignr}${top_mem mem 6}
+# -- # ${lua_parse top_mem_colour 7}${top_mem name 7}${alignr}${top_mem pid 7} ${alignr}${top_mem cpu 7} ${alignr}${top_mem mem 7}
+# -- # ${lua_parse top_mem_colour 8}${top_mem name 8}${alignr}${top_mem pid 8} ${alignr}${top_mem cpu 8} ${alignr}${top_mem mem 8}
+# -- # ${lua_parse top_mem_colour 9}${top_mem name 9}${alignr}${top_mem pid 9} ${alignr}${top_mem cpu 9} ${alignr}${top_mem mem 9}
+# -- # ${color} 
+
+${color5}Name          ${alignr}PID     CPU%     MEM%
+Highest CPU: ${color}
+
+${lua_parse top_cpu_colour 1}
+${lua_parse top_cpu_colour 2}
+${lua_parse top_cpu_colour 3}
+${lua_parse top_cpu_colour 4}
+
+${color5}Highest CPU: ${color}
+${lua_parse top_mem_colour 1}
+${lua_parse top_mem_colour 2}
+${lua_parse top_mem_colour 3}
+${lua_parse top_mem_colour 4}

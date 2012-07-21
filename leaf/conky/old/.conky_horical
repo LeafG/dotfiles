@@ -1,0 +1,15 @@
+default_color white  
+alignment top_right
+uppercase no
+text_buffer_size 2048
+imlib_cache_size 0 
+gap_x 5  
+gap_y 0
+TEXT
+
+$color${execpi 36000 ~/conky/horical.sh}${color} 
+${voffset 5}${goto 198}${color}${hr 1}
+${color 72A4DB}${voffset -64}${goto 46}${font DejaVu:bold:size=18}${time %A}${font DejaVu:bold:size=40}${goto 175} ${color}${voffset 0}${time %d}$color
+${color 72A4DB}${voffset -50}${font DejaVu:bold:size=24}${goto 46}${time %b}${font DejaVu:bold:size=16}${goto 128}${color}${voffset 4}${time %Y}$color
+
+#${voffset -32}${font sDejaVu:italic:size=15}${goto 280}${color E0EBF1}
